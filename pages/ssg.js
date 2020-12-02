@@ -10,6 +10,7 @@ export function getStaticProps() {
   // Note that in this case we're returning the state directly, without creating
   // the store first (like in /pages/ssr.js), this approach can be better and easier
   return {
+      revalidate: 10,
     props: {
       initialReduxState: {
         lastUpdate: Date.now(),
